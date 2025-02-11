@@ -1,0 +1,66 @@
+Overview
+---------
+This repository contains the source code and resources for three exercises: an automation script using Selenium, a Postman collection for API testing, and SQL queries for database manipulation. The automation script is designed to interact with a web application, while the Postman collection is used to verify API responses, and the SQL queries are intended for managing data in a database.
+
+
+
+Design Decisions
+-----------------
+Automation Script (Selenium):
+
+
+The script is written in Python and utilizes the Selenium WebDriver to automate browser interactions.
+It performs a series of actions: logging in, adding a package, verifying its existence, and deleting it.
+Random dimensions for the package are generated to ensure uniqueness.
+Color-coded print statements are included for better visibility of the script's progress and results.
+
+
+
+
+Postman Collection:
+
+The collection includes requests to verify addresses and retrieve shipment details from the EasyPost API.
+Tests are included to validate the response structure and specific values, ensuring the API behaves as expected.
+
+
+
+
+SQL Queries:
+
+The SQL scripts are designed to update records in the Admissions table and retrieve data from the Doctors and Patients tables.
+The queries are structured to ensure data integrity and to provide insights into the relationships between doctors, patients, and admissions.
+
+
+Approach
+---------
+Selenium Automation:  The script initializes a Chrome WebDriver, navigates to the specified URL, and performs actions based on the defined functions. It uses explicit waits to ensure elements are interactable before performing actions.
+
+Postman Testing: The collection is structured to include both request and test scripts, allowing for automated validation of API responses.
+
+SQL Management: The SQL queries are straightforward and focus on updating and retrieving data based on specific conditions.
+
+
+Execution Steps
+-----------------
+Automation Script:
+
+Ensure Python and Selenium are installed.
+Download the Chrome WebDriver and ensure it is in your system's PATH.
+Run the script using Python: python automation_script.py.
+
+
+
+Postman Collection:
+
+Import the Impledge_QA_YourFullName.postman_collection.json file into Postman.
+Set up the necessary environment variables if required.
+Execute the requests and review the test results.
+
+
+
+
+SQL Queries:
+
+Connect to your database using a SQL client.
+Execute the provided SQL scripts to update and retrieve data.
+This repository serves as a comprehensive solution for automation, API testing, and database management, showcasing the integration of different technologies to achieve testing and data manipulation goals.
