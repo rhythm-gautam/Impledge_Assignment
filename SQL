@@ -1,0 +1,33 @@
+UPDATE Admissions SET attending_doctor_id = 29 WHERE attending_doctor_id = 3;
+UPDATE Admissions SET patient_id = 4 WHERE patient_id = 35;
+
+SELECT DISTINCT d.*
+FROM Doctors d
+INNER JOIN Admissions a 
+ON d.doctor_id = a.attending_doctor_id;
+
+/*------------------------------------------------------------------------------------*/
+
+UPDATE Admissions SET attending_doctor_id = 29 WHERE attending_doctor_id = 3;
+UPDATE Admissions SET patient_id = 4 WHERE patient_id = 35;
+
+
+SELECT d.*
+FROM Doctors d
+WHERE d.doctor_id NOT IN (
+    SELECT a.attending_doctor_id
+    FROM Admissions a
+);
+
+/*------------------------------------------------------------------------------------*/
+
+
+UPDATE Admissions SET attending_doctor_id = 29 WHERE attending_doctor_id = 3;
+UPDATE Admissions SET patient_id = 4 WHERE patient_id = 35;
+
+
+SELECT p.*
+FROM Patients p
+LEFT JOIN Admissions a ON p.patient_id = a.patient_id
+LEFT JOIN Doctors d ON a.attending_doctor_id = d.doctor_id
+WHERE a.attending_doctor_id IS NOT NULL AND d.doctor_id IS NULL;
